@@ -1,0 +1,31 @@
+html:
+    background color for our body element in html
+    main container: 
+        form container:
+            header
+                a h1 heading stay updated
+                a paragraph with a list with three items
+            label text email
+                
+                a form which takes an email input with placeholder text
+                a submit button
+        second container:
+            an image 
+        
+
+css: 
+    font size 16;
+    font family roboto
+    weights 400 and 500;
+    colors:
+        - Dark Slate Grey: hsl(234, 29%, 20%)
+        - Charcoal Grey: hsl(235, 18%, 26%)
+        - Grey: hsl(231, 7%, 60%)
+        - White: hsl(0, 0%, 100%)
+        - Tomato: hsl(4, 100%, 67%)
+
+logic:
+email must not be empty 
+    on submission if the email is valid we will send a success message.
+    if submission is not successful we return an error
+    
