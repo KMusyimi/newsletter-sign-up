@@ -10,4 +10,4 @@ Challenge done by [KMusyimi] (<https://github.com/KMusyimi>).
 ![Finished design preview for the mobile sign up success state](./screenshots/mobile-success-state.png)
 ![Finished design preview for the mobile sign up input not valid](./screenshots/mobile-invalid-email.png)
 
-[^1]The challenge was written in plain Javascript, CSS and HTML.
+[^1]:The challenge was written in plain Javascript, CSS and HTML.
