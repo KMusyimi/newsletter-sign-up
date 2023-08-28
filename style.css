@@ -139,6 +139,11 @@ img {
 .email::placeholder {
   color: var(--charcoal-grey);
 }
+.btn,
+.email,
+.email::placeholder {
+  font-family: var(--ff-regular), sans-serif;
+}
 
 .email,
 .btn {
@@ -148,11 +153,6 @@ img {
   padding: 0.8em 1em;
 }
 
-.btn,
-.email,
-.email::placeholder {
-  font-family: var(--ff-regular), sans-serif;
-}
 .btn {
   display: inline-block;
   background-color: var(--dark-slate-grey);
@@ -233,6 +233,10 @@ img {
     justify-content: space-between;
     padding: 2em;
   }
+  .form h1 {
+    font-size: 5rem;
+  }
+
 
   .d--flex-fd-row {
     flex-direction: row;
