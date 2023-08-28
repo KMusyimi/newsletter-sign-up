@@ -14,12 +14,12 @@
 }
 @font-face {
   font-family: var(--ff-regular);
-  src: url("assets/fonts/Roboto-Regular.ttf") format("truetype");
+  src: url('assets/fonts/Roboto-Regular.ttf') format('truetype');
   font-weight: 400;
 }
 @font-face {
   font-family: var(--ff-bold);
-  src: url("assets/fonts/Roboto-Bold.ttf") format("truetype");
+  src: url('assets/fonts/Roboto-Bold.ttf') format('truetype');
   font-weight: 700;
 }
 
@@ -130,15 +130,16 @@ img {
   outline: 2px solid var(--dark-slate-grey);
   box-shadow: 1px 2px 6px var(--dark-slate-grey);
 }
-.email::placeholder {
-  color: var(--charcoal-grey);
-}
 .email:invalid {
   background-color: hsla(4, 100%, 67%, 0.2);
   border: 1px solid var(--tomato);
   outline: 1.5px solid var(--tomato);
   box-shadow: 1px 2px 6px var(--tomato);
 }
+.email::placeholder {
+  color: var(--charcoal-grey);
+}
+
 .email,
 .btn {
   width: 100%;
@@ -147,6 +148,11 @@ img {
   padding: 0.8em 1em;
 }
 
+.btn,
+.email,
+.email::placeholder {
+  font-family: var(--ff-regular), sans-serif;
+}
 .btn {
   display: inline-block;
   background-color: var(--dark-slate-grey);
