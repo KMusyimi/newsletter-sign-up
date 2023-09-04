@@ -67,7 +67,7 @@ img {
   display: flex;
 }
 .container {
-  height: 85vmax;
+  height: 85dvh;
   align-items: center;
   justify-content: center;
   margin-bottom: 9em;
@@ -76,6 +76,10 @@ img {
   background: var(--white);
   max-width: 500px;
   margin: 0 auto;
+  transition: opacity 200ms linear;
+}
+.form--visually-hidden {
+  opacity: 0;
 }
 .form--hidden {
   display: none;
@@ -117,6 +121,14 @@ img {
   content: url(assets/images/icon-list.svg);
 }
 
+.email__container {
+  font-size: var(--fz-12);
+
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+
+}
 .email__address {
   color: var(--dark-slate-grey);
 }
@@ -166,19 +178,30 @@ img {
 .email:invalid {
   color: var(--tomato);
 }
+
 .email__address,
 .error__state {
-  display: inline-block;
   font-weight: bold;
-  margin-bottom: 0.6em;
 }
-.error__state {
-  margin-left: 11em;
+
+.error__state--hidden {
   visibility: hidden;
+}
+
+.error__state {
+  font-size: var(fz);
+  visibility: visible;
 }
 .d--flex-fd-col {
   flex-direction: column;
 }
+.success__state {
+  transition: all 600ms;
+}
+.success__state--visually-hidden {
+  opacity: 0;
+}
+
 .success__state h2 {
   font-size: var(--fz-30);
   margin-bottom: 0.3em;
@@ -203,32 +226,16 @@ img {
   text-align: center;
 }
 
-.fade__in {
-  font-size: var(--fz-12);
-
-  animation: fadein 3s;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @media only screen and (min-width: 1280px) {
   body {
     background-color: var(--dark-slate-grey);
   }
   .container {
     height: calc(100vmin - 30px);
-    align-items: center;
     margin-bottom: 0;
   }
   .form {
-    max-width: 900px;
+    max-width: 70dvw;
     align-items: center;
     justify-content: space-between;
     padding: 2em;
@@ -236,7 +243,6 @@ img {
   .form h1 {
     font-size: 5rem;
   }
-
 
   .d--flex-fd-row {
     flex-direction: row;
@@ -247,13 +253,13 @@ img {
   .updates__list {
     margin-left: 2.6em;
   }
+  .email__container {
+    margin-bottom: 1em;
+  }
   .email__address,
   .email,
   .email::placeholder {
     font-size: 1.4rem;
-  }
-  .email__address {
-    margin-bottom: 0.8em;
   }
 
   .btn,
@@ -271,6 +277,7 @@ img {
   .btn:hover {
     background-color: var(--tomato);
     box-shadow: 1px 2px 6px var(--tomato);
+    transition: ease-in 200ms;
   }
   .form,
   .success__state {
@@ -278,10 +285,11 @@ img {
   }
   .success__state {
     background-color: var(--white);
+    padding: 4em;
     height: 430px;
     max-width: 400px;
-    padding: 4em;
   }
+
   .attribution {
     color: var(--white);
   }
